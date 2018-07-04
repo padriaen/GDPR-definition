@@ -1,0 +1,42 @@
+.gdpr {
+    margin: 2%;
+}
+
+.imagen {
+    width: 100%;
+    height: auto;
+}
+
+.border {
+    border:2px solid black;
+    //max-height: 250px;
+    height: auto;
+}
+
+.paragraph {
+    padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.checkmark{
+    display: inline-block; 
+    vertical-align: top;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.button {
+    text-align: right;
+}
+
+.separador {
+    clear:both; 
+    height: 1.5rem;
+}
+
+.txt {
+    width: 100%
+}
+
+::ng-deep .mat-checkbox-label {
+    white-space: pre-wrap;
+}
