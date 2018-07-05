@@ -1,40 +1,50 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div class="container">
   <mat-card class="gdpr">
+
+    <!--Image-->
     <div class="columns">
       <div class="column">
         <img class="imagen has-text-centered" src="./assets/img/European_Union_Flag.png">
+        <!-- https://help.github.com/assets/images/help/profile/identicon.png
+             https://blog.malwarebytes.com/wp-content/uploads/2017/07/shutterstock_328174601-900x506.jpg -->
       </div>
     </div>
-
-    <div class="separador"></div>
-
+    <br>
+    <!--Description-->
     <div class="columns">
       <div class="column">
         <mat-card-content>
           <div class="border">
-            <embed class="txt" src="https://api.uclassify.com/v1/%7Busername%7D/%7BclassifierName%7D/classify/?readKey=YOUR_READ_API_KEY_HERE&text=This+is+the+text+to+classify">
-            <embed class="txt" src="./assets/txt/Lorem2.txt"> </div>
+            <iframe class="txt" src="http://fs2.american.edu/alberto/www/resources/html/text.html"></iframe>
+            <!--
+            <pre>
+              {{miArray.firstparagraf}}
+              <br>
+              <br>
+              {{miArray.second}}
+            </pre>
+          -->
+          </div>
         </mat-card-content>
       </div>
     </div>
 
+    <!--Checkbox-->
     <div class="column">
       <mat-checkbox #termsi>
         Aliquam eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis.Vulputate mi sit amet mauris. Cursus sit amet
         dictum sit amet justo donec.
       </mat-checkbox>
     </div>
+    <br>
 
-    <div class="separador"></div>
-
+    <!--Accept and Decline buttons-->
     <div class="is-pulled-right">
       <button mat-button type="button" style="margin-right: 15px" (click)="onClickTerms(true)" [disabled]="!(termsi.checked)">Accept</button>
       <button mat-button type="button" (click)="onClickTerms(false)">Decline</button>
     </div>
-
-    <div class="separador"></div>
-
+    <br>
   </mat-card>
 </div>
 
