@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { CookieService } from 'ngx-cookie';
+import { Key } from 'protractor';
 
 declare const require: any;
 
@@ -12,9 +14,8 @@ export class GdprComponent implements OnInit {
   description: string;
   texto: string = require('../../assets/txt/Lorem.json');
   miArray = require('../../assets/txt/Lorem.json');
-  //miArray2 = require('https://raw.githubusercontent.com/oasp/oasp4j/develop/LICENSE.txt');
 
-  constructor() { }
+  constructor(private _cookieService:CookieService) { }
 
   ngOnInit() {
     console.log(this.miArray);
@@ -22,6 +23,8 @@ export class GdprComponent implements OnInit {
 
   onClickTerms(accepted: Boolean) {
     localStorage.setItem('gdpr', accepted ? 'true' : 'false');
+    sessionStorage.setItem('gdpr', accepted ? 'true' : 'false');
+    this._cookieService.put('gdpr', accepted ? 'true' : 'false');
   }
 
 }

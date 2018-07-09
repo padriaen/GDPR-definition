@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { GdprComponent } from './gdpr/gdpr.component';
+import { CookieModule } from 'ngx-cookie';
 import {
   MatAutocompleteModule,
   MatBadgeModule,
@@ -91,6 +92,7 @@ export class GdprMaterialModule {}
     BrowserModule,
     AppRoutingModule,
     GdprMaterialModule,
+    CookieModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
